@@ -12,10 +12,10 @@ jobs:
 
       # Download and cache dependencies
       - restore-cache:
-        keys:
-          - v1-dependencies{{ checksum "requirements.txt"}}
-          # fallback to using the latest cache is no exact match is found
-          - v1-dependencies-
+          keys:
+            - v1-dependencies{{ checksum "requirements.txt"}}
+            # fallback to using the latest cache is no exact match is found
+            - v1-dependencies-
       
       - run:
           name: install dependencies
